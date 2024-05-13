@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25.0)
-project(Win32CppTemplate VERSION 1.0)
+project(NeonWindow VERSION 1.0)
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -12,19 +12,26 @@ add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 include_directories("./includes/")
 
 set(HEADER_FILES
-    ./includes/main.h
+    ./includes/appContext.h
+    ./includes/comp.h
+    ./includes/dx2.h
 )
 
 set(SRC_FILES
+    ./src/appContext.cpp
+    ./src/comp.cpp
+    ./src/dx2.cpp
     ./src/main.cpp
 )
 
-add_executable(Win32CppTemplate WIN32
-    ${HEADER_FILES} 
+add_executable(
+    NeonWindow
+    WIN32
+    ${HEADER_FILES}
     ${SRC_FILES}
 )
 
-target_include_directories(Win32CppTemplate
+target_include_directories(NeonWindow
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes
 )
 

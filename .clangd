@@ -1,7 +1,7 @@
 CompileFlags:
   Add: [
     "-std=c++17",
-    "-IC:\\EDisk\\CppCodes\\CodeTemplates\\Win32CppTemplate\\includes", # you should replace this to your own include path of this project
+    "-IC:\\EDisk\\CppCodes\\DirectXCodes\\NeonWindow\\includes", # you should replace this to your own include path of this project
     -Wno-microsoft-goto,
     -Wno-nonportable-include-path,
     -Wno-microsoft-extra-qualification,
